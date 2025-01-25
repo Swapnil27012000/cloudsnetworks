@@ -52,19 +52,16 @@ if (isset($_POST['con_submit'])) {
 
 
                 // Send email 
-                mail($to, $subject, $htmlContent, $headers);
+                if(mail($to, $subject, $htmlContent, $headers)){
+                    $status = 'success';
+                    $statusMsg = 'Thank you! Your contact request has been submitted successfully.';
+                    $postData = '';
+                    print '<script>alert("Thank you! Your contact request has been submitted successfully.")</script>';
+                    print '<script>top.location = "index.html";</script>';
 
-                $status = 'success';
+                }
 
-                // $query10 = "INSERT INTO contact_info(name, email, contact, subject, message, time_stamp) 
-                //                 VALUES('$name','$email','$contact1','$subject','$message', '$timestamp')";
-                // $result10 = mysqli_query($con, $query10) or die(mysqli_error($con));
-
-
-                $statusMsg = 'Thank you! Your contact request has been submitted successfully.';
-                $postData = '';
-                print '<script>alert("Thank you! Your contact request has been submitted successfully.")</script>';
-                print '<script>top.location = "index.html";</script>';
+                
             } else {
                 $statusMsg = 'Robot verification failed, please try again.';
                 print '<script>alert("Robot verification failed, please try again.")</script>';
