@@ -52,14 +52,28 @@ if (isset($_POST['con_submit'])) {
 
 
                 // Send email 
-                if(mail($to, $subject, $htmlContent, $headers)){
-                    $status = 'success';
+                // if(mail($to, $subject, $htmlContent, $headers)){
+                    ///
+                    require __DIR__ . '/vendor/autoload.php';
+
+                    $resend = Resend::client("re_M65Jr43T_97XsHQvSKYy1DXFEHDmvJP5W");
+        
+                    $resend->emails->send([
+                    'from' => 'onboarding@resend.dev',
+                    'to' => $recipientEmail,
+                    'subject' => $subject,
+                    'html' => '<p><strong>'.$message.'</strong>!<br>
+                    '.$message.'</p>'
+                    ]);
+        
+                    ///
+                    // $status = 'success';
                     $statusMsg = 'Thank you! Your contact request has been submitted successfully.';
-                    $postData = '';
+                    // $postData = '';
                     print '<script>alert("Thank you! Your contact request has been submitted successfully.")</script>';
                     print '<script>top.location = "index.html";</script>';
 
-                }
+                // }
 
                 
             } else {
