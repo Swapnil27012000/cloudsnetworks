@@ -75,8 +75,8 @@
 
         // FIXME: Update this to your desired email address.
 
-        // $recipient = "business.cloudsnetworks@outlook.com";
-        $recipient = "swapnilkamble27012000@gmail.com";
+        $recipient = "business.cloudsnetworks@outlook.com";
+        // $recipient = "swapnilkamble27012000@gmail.com";
 
 
 
@@ -143,9 +143,20 @@
 
             // Set a 200 (okay) response code.
 
-            http_response_code(200);
+            // http_response_code(200);
+            require __DIR__ . '/vendor/autoload.php';
+            $resend = Resend::client('re_M65Jr43T_97XsHQvSKYy1DXFEHDmvJP5W');
+
+            $resend->emails->send([
+            'from' => 'onboarding@resend.dev',
+            'to' => $recipient,
+            'subject' => $sender,
+            'html' => '<p>Contact from <strong>'.$sender.'</strong>!<br>
+            '.$email_content.'</p>'
+            ]);
 
             echo"Thank You! Your message has been sent.";
+
 
         } else {
 

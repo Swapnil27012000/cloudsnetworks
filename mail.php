@@ -145,18 +145,19 @@
 
             // http_response_code(200);
             require __DIR__ . '/vendor/autoload.php';
-            $resend = Resend::client('re_M65Jr43T_97XsHQvSKYy1DXFEHDmvJP5W');
+
+            $resend = Resend::client("re_M65Jr43T_97XsHQvSKYy1DXFEHDmvJP5W");
 
             $resend->emails->send([
             'from' => 'onboarding@resend.dev',
-            'to' => 'business.cloudsnetworks@outlook.com',
-            'subject' => '$sender',
-            'html' => '<p>Congrats on sending your <strong>first email</strong>!<br>$email_content</p>'
+            'to' => $recipient,
+            'subject' => $sender,
+            'html' => '<p><strong>'.$sender.'</strong>!<br>
+            '.$email_content.'</p>'
             ]);
 
             echo"Thank You! Your message has been sent.";
 
-            echo"Thank You! Your message has been sent.";
 
         } else {
 
