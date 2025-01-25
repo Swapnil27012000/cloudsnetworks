@@ -1,0 +1,7 @@
+{
+
+    "features": ["apache"],
+
+    "postCreateCommand": "apachectl restart"
+
+}
