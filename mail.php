@@ -80,33 +80,22 @@
         $recipient = "business.cloudsnetworks@outlook.com";
         // $recipient = "swapnilkamble27012000@gmail.com";
 
-
-
         // Set the email subject.
-
         $sender = "New contact from $name";
 
-
-
         //Email Header
-
         $head = " /// Clouds Networks \\\ ";
 
-
-
         // Build the email content.
-
         $email_content = "$head\n\n\n";
 
         if(isset($_POST["name"])){
             $email_content .= "Name: $name\n";
         }
-
         if(isset($_POST["name"]) AND isset($_POST["l_name"])){
             $email_content .= "Name: {$name} {$name_2}\n";
         }
 
-        
         $email_content .= "Email: $email\n\n";
 
         // IF SET SUBJECT
@@ -145,7 +134,7 @@
 
             // Set a 200 (okay) response code.
 
-            // http_response_code(200);
+            http_response_code(200);
             require __DIR__ . '/vendor/autoload.php';
 
             $resend = Resend::client("re_M65Jr43T_97XsHQvSKYy1DXFEHDmvJP5W");

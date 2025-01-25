@@ -3,11 +3,8 @@
 $siteKey = '6LdN_MIqAAAAABRHixSxHDgipsBbFFRtA8JozaSH';
 $secretKey  = '6LdN_MIqAAAAAGIhln9RN3OOkeS0AU3MheIyd_aY';
 
-
+// Email settings 
 $recipientEmail = 'business.cloudsnetworks@outlook.com';
-
-// // Email settings 
-// $recipientEmail = 'business.cloudsnetworks@outlook.com';
 
 // If the form is submitted 
 $postData = $statusMsg = '';
@@ -31,9 +28,9 @@ if (isset($_POST['con_submit'])) {
                 $subject = !empty($_POST['subject']) ? $_POST['subject'] : '';
                 $message = !empty($_POST['message']) ? $_POST['message'] : '';
 
-                date_default_timezone_set("Asia/Calcutta");
-                $timestamp = time();
-                $timestamp = date('Y-m-d H:i:s', $timestamp);
+                // date_default_timezone_set("Asia/Calcutta");
+                // $timestamp = time();
+                // $timestamp = date('Y-m-d H:i:s', $timestamp);
 
 
                 // Send email notification to the site admin 
