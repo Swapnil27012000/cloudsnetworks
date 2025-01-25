@@ -1,7 +1,9 @@
 {
 
-    "features": ["apache"],
+    "image": "ubuntu:latest",  
 
-    "postCreateCommand": "apachectl restart"
+    "features": ["apache"], 
 
-}
+    "postCreateCommand": "sudo a2enmod rewrite && sudo systemctl restart apache2" 
+
+} 
