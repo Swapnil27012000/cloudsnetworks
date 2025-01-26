@@ -37,7 +37,8 @@ if (isset($_POST['con_submit'])) {
                 $to = $recipientEmail;
                 // $subject = 'New Contact Request Submitted';
                 $htmlContent = " 
-                    <h4>Contact request details</h4> 
+                    <h4>Contact request details</h4>
+                    <p>Hey Swapnil,</p> 
                     <p><b>Name: </b>" . $name . "</p> 
                     <p><b>Email: </b>" . $email . "</p> 
                     <p><b>Contact: </b>" . $contact1 . "</p> 
@@ -48,7 +49,7 @@ if (isset($_POST['con_submit'])) {
                 // $headers = "MIME-Version: 1.0" . "\r\n";
                 // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
                 // More headers 
-                $headers = 'From:' . $name . ' <' . $email . '>' . "\r\n";
+                $headers = 'From: ' . $name . ' <' . $email . '>' . "\r\n";
 
 
                 // Send email 
