@@ -74,24 +74,24 @@ if (isset($_POST['con_submit'])) {
                     $statusMsg = 'Thank you! Your contact request has been submitted successfully.';
                     // $postData = '';
                     print '<script>alert("Thank you! Your contact request has been submitted successfully.")</script>';
-                    print '<script>top.location = "index.html";</script>';
+                    print '<script>top.location = "../index.html";</script>';
 
                 
                 
             } else {
                 $statusMsg = 'Robot verification failed, please try again.';
                 print '<script>alert("Robot verification failed, please try again.")</script>';
-                print '<script>top.location = "index.html";</script>';
+                print '<script>top.location = "../index.html";</script>';
             }
         } else {
             $statusMsg = 'Please check the reCAPTCHA checkbox.';
 
             print '<script>alert("Please check the reCAPTCHA checkbox")</script>';
-            print '<script>top.location = "index.html";</script>';
+            print '<script>top.location = "../index.html";</script>';
         }
     } else {
         $statusMsg = 'Please fill all the mandatory fields.';
         print '<script>alert("Please fill all the mandatory fields.")</script>';
-        print '<script>top.location = "index.html";</script>';
+        print '<script>top.location = "../index.html";</script>';
     }
 }
