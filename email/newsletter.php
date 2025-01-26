@@ -59,6 +59,6 @@ if (isset($_POST['newslettersubmit'])) {
     } else {
         $statusMsg = 'Please fill all the mandatory fields.';
         print '<script>alert("Please fill all the mandatory fields.")</script>';
-        print '<script>top.location = "index.html";</script>';
+        print '<script>top.location = "../index.html";</script>';
     }
 }
