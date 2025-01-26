@@ -54,7 +54,7 @@ if (isset($_POST['con_submit'])) {
                 // Send email 
                 // if(mail($to, $subject, $htmlContent, $headers)){
                     ///
-                    require __DIR__ . '/vendor/autoload.php';
+                    // require __DIR__ . '/vendor/autoload.php';
 
                     $resend = Resend::client("re_M65Jr43T_97XsHQvSKYy1DXFEHDmvJP5W");
         
@@ -62,8 +62,9 @@ if (isset($_POST['con_submit'])) {
                     'from' => 'onboarding@resend.dev',
                     'to' => $recipientEmail,
                     'subject' => $subject,
-                    'html' => '<p><strong>'.$message.'</strong>!<br>
-                    '.$message.'</p>'
+                    'html' => '<p><strong> New Contact From: '.$name.'</strong>!<br>
+                    '.$htmlContent.'
+                    </p>'
                     ]);
         
                     ///
