@@ -53,8 +53,8 @@ if (isset($_POST['con_submit'])) {
 
 
                 // Send email 
-                // if(mail($to, $subject, $htmlContent, $headers)){
-                    ///
+                //mail($to, $subject, $htmlContent, $headers));
+                
                     require __DIR__ . '/vendor/autoload.php';
 
                     $resend = Resend::client("re_M65Jr43T_97XsHQvSKYy1DXFEHDmvJP5W");
@@ -76,8 +76,7 @@ if (isset($_POST['con_submit'])) {
                     print '<script>alert("Thank you! Your contact request has been submitted successfully.")</script>';
                     print '<script>top.location = "index.html";</script>';
 
-                // }
-
+                
                 
             } else {
                 $statusMsg = 'Robot verification failed, please try again.';
