@@ -62,7 +62,8 @@ if (isset($_POST['con_submit'])) {
                     'from' => 'onboarding@resend.dev',
                     'to' => $recipientEmail,
                     'subject' => $subject,
-                    'html' => '<p><strong> New Contact From: '.$name.'</strong>!<br>
+                    'html' => '<p>
+                    <strong> New Contact: '.$headers.'</strong>!<br>
                     '.$htmlContent.'
                     </p>'
                     ]);
