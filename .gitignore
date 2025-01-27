@@ -11,3 +11,4 @@ composer.json
 
 .env
 
+email/vendor/vlucas/phpdotenv/
