@@ -10,5 +10,5 @@ composer.json
 /assets/
 
 .env
-
+*.php
 email/vendor/vlucas/phpdotenv/
