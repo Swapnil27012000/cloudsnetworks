@@ -17,6 +17,8 @@ api.php
 mail.php
 newsletter.php
 submit.php
-
+email/mail.php
+email/newsletter.php
+email/submit.php
 
 contact.html
