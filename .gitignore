@@ -8,7 +8,12 @@ composer.json
 
 /CNTest/
 /assets/
+/.github/
+/email/
 
 .env
-*.php
-email/vendor/vlucas/phpdotenv/
+.php
+api.php
+mail.php
+newsletter.php
+submit.php
