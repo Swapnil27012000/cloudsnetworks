@@ -1,0 +1,10 @@
+<FilesMatch "\.(inc|sql|lock|env)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
