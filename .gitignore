@@ -1,0 +1,58 @@
+# --- Root & General ---
+# Logic: Patterns without a leading / match recursively (e.g. frontend/node_modules is ignored)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun.lockb
+# Note: bun.lock (text) is usually committed, bun.lockb (binary) depends on preference, often committed now too, but preventing conflicts if needed. 
+# If you strictly want to ignore lockfiles (not recommended), uncomment:
+# bun.lock
+# bun.lockb
+.pnpm-store
+
+# System
+.DS_Store
+Thumbs.db
+*.pem
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Frontend (Next.js) ---
+# These patterns match recursively, covering /frontend/
+.next/
+out/
+build/
+dist/
+next-env.d.ts
+*.tsbuildinfo
+.vercel/
+
+# --- Backend (Hono + Drizzle) ---
+# These patterns match recursively, covering /backend/
+# Cloudflare Wrangler / Workers
+.wrangler/
+.dev.vars
+
+# Drizzle / Database
+# Keep generic DB files out of git
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-journal
+# Drizzle - migrations are usually committed (drizzle/ folder)
+
+# Logs
+logs
+*.log
